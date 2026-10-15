@@ -1,0 +1,29 @@
+local rawUrl = "https://raw.githubusercontent.com/boniloyzin-cloud/Banana/refs/heads/main/raw%20(11).txt"
+local success, scriptContent = pcall(function()
+    return game:HttpGet(rawUrl)
+end)
+
+if success and scriptContent then
+    local modifiedScript = scriptContent
+        -- Top bar and header title replacements
+        :gsub("leakD Hub X Banana", "DAVI HUB")
+        :gsub("leakD Hub", "DAVI HUB")
+        :gsub("Banana Hub", "DAVI HUB")
+        :gsub("Banana", "DAVI HUB")
+        
+        -- Subtitle and author text replacements
+        :gsub("by leakD", "blox fruit by DAVI")
+        :gsub("by leakd", "blox fruit by DAVI")
+        :gsub("leakD", "DAVI")
+        :gsub("leakd", "DAVI")
+
+    local executeFunc, err = loadstring(modifiedScript)
+    if executeFunc then
+        executeFunc()
+    else
+        local fallbackFunc = loadstring(scriptContent)
+        if fallbackFunc then
+            fallbackFunc()
+        end
+    end
+end
