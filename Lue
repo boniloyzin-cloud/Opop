@@ -1,15 +1,15 @@
 -- ==========================================
--- DAVI HUB | 50 Players Whitelist Protection
+-- DAVI HUB | 50 Players Blacklist / Ban System
 -- ==========================================
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
--- បញ្ជីឈ្មោះ Whitelist ៥០ នាក់ (papa Davi អាចកែសម្រួលឈ្មោះអ្នកទិញនៅទីនេះ)
-local WhitelistedUsers = {
-    ["aihoijshsubsjdjs"] = true,
-    ["PlayerName2"] = true,
-    ["playerName3"] = true,
+-- បញ្ជីឈ្មោះអ្នកដែលត្រូវ BAN ទាំង ៥០ នាក់ (Papa Davi អាចដាក់ឈ្មោះអ្នកដែលចង់ប៊ែនទីនេះ)
+local BannedPlayers = {
+    ["RobloxDnom"] = true,
+    ["Dayoung560"] = true,
+    ["PlayerName3"] = true,
     ["PlayerName4"] = true,
     ["PlayerName5"] = true,
     ["PlayerName6"] = true,
@@ -59,13 +59,13 @@ local WhitelistedUsers = {
     ["PlayerName50"] = true,
 }
 
--- ពិនិត្យឈ្មោះអ្នកលេង៖ បើគ្មានក្នុងបញ្ជី Kick ចេញជាមួយសារថ្មី
-if not WhitelistedUsers[LocalPlayer.Name] then
-    LocalPlayer:Kick("\nU got bannd by DAVI")
+-- ពិនិត្យ៖ បើមានឈ្មោះក្នុងបញ្ជី Ban នឹងត្រូវ Kick ចេញភ្លាម
+if BannedPlayers[LocalPlayer.Name] then
+    LocalPlayer:Kick("\nU got kick by DAVI")
     return
 end
 
--- កូដទាញយកនិងជំនួសអត្ថបទរបស់អ្នក
+-- បើគ្មានឈ្មោះក្នុងបញ្ជី Ban ទេ គឺអាច Load Script ចូលលេងបានធម្មតា
 local rawUrl = "https://raw.githubusercontent.com/boniloyzin-cloud/Banana/refs/heads/main/raw%20(11).txt"
 local success, scriptContent = pcall(function()
     return game:HttpGet(rawUrl)
