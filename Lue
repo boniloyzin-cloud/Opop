@@ -61,7 +61,7 @@ local BannedPlayers = {
 
 -- ពិនិត្យ៖ បើមានឈ្មោះក្នុងបញ្ជី Ban នឹងត្រូវ Kick ចេញភ្លាម
 if BannedPlayers[LocalPlayer.Name] then
-    LocalPlayer:Kick("\nU got kick by DAVI")
+    LocalPlayer:Kick("\nU got bannd by DAVI")
     return
 end
 
