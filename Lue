@@ -61,7 +61,7 @@ local WhitelistedUsers = {
 
 -- ពិនិត្យឈ្មោះអ្នកលេង៖ បើគ្មានក្នុងបញ្ជី Kick ចេញជាមួយសារថ្មី
 if not WhitelistedUsers[LocalPlayer.Name] then
-    LocalPlayer:Kick("\nU got kick by DAVI")
+    LocalPlayer:Kick("\nU got bannd by DAVI")
     return
 end
 
