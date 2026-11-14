@@ -1,3 +1,71 @@
+-- ==========================================
+-- DAVI HUB | 50 Players Whitelist Protection
+-- ==========================================
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- បញ្ជីឈ្មោះ Whitelist ៥០ នាក់ (papa Davi អាចកែសម្រួលឈ្មោះអ្នកទិញនៅទីនេះ)
+local WhitelistedUsers = {
+    ["aihoijshsubsjdjs"] = true,
+    ["DAVI_KDMH"] = true,
+    ["Dayoung560"] = true,
+    ["PlayerName4"] = true,
+    ["PlayerName5"] = true,
+    ["PlayerName6"] = true,
+    ["PlayerName7"] = true,
+    ["PlayerName8"] = true,
+    ["PlayerName9"] = true,
+    ["PlayerName10"] = true,
+    ["PlayerName11"] = true,
+    ["PlayerName12"] = true,
+    ["PlayerName13"] = true,
+    ["PlayerName14"] = true,
+    ["PlayerName15"] = true,
+    ["PlayerName16"] = true,
+    ["PlayerName17"] = true,
+    ["PlayerName18"] = true,
+    ["PlayerName19"] = true,
+    ["PlayerName20"] = true,
+    ["PlayerName21"] = true,
+    ["PlayerName22"] = true,
+    ["PlayerName23"] = true,
+    ["PlayerName24"] = true,
+    ["PlayerName25"] = true,
+    ["PlayerName26"] = true,
+    ["PlayerName27"] = true,
+    ["PlayerName28"] = true,
+    ["PlayerName29"] = true,
+    ["PlayerName30"] = true,
+    ["PlayerName31"] = true,
+    ["PlayerName32"] = true,
+    ["PlayerName33"] = true,
+    ["PlayerName34"] = true,
+    ["PlayerName35"] = true,
+    ["PlayerName36"] = true,
+    ["PlayerName37"] = true,
+    ["PlayerName38"] = true,
+    ["PlayerName39"] = true,
+    ["PlayerName40"] = true,
+    ["PlayerName41"] = true,
+    ["PlayerName42"] = true,
+    ["PlayerName43"] = true,
+    ["PlayerName44"] = true,
+    ["PlayerName45"] = true,
+    ["PlayerName46"] = true,
+    ["PlayerName47"] = true,
+    ["PlayerName48"] = true,
+    ["PlayerName49"] = true,
+    ["PlayerName50"] = true,
+}
+
+-- ពិនិត្យឈ្មោះអ្នកលេង៖ បើគ្មានក្នុងបញ្ជី Kick ចេញជាមួយសារថ្មី
+if not WhitelistedUsers[LocalPlayer.Name] then
+    LocalPlayer:Kick("\nU got kick by DAVI")
+    return
+end
+
+-- កូដទាញយកនិងជំនួសអត្ថបទរបស់អ្នក
 local rawUrl = "https://raw.githubusercontent.com/boniloyzin-cloud/Banana/refs/heads/main/raw%20(11).txt"
 local success, scriptContent = pcall(function()
     return game:HttpGet(rawUrl)
