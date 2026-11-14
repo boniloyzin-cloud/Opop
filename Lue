@@ -8,8 +8,8 @@ local LocalPlayer = Players.LocalPlayer
 -- បញ្ជីឈ្មោះ Whitelist ៥០ នាក់ (papa Davi អាចកែសម្រួលឈ្មោះអ្នកទិញនៅទីនេះ)
 local WhitelistedUsers = {
     ["aihoijshsubsjdjs"] = true,
-    ["DAVI_KDMH"] = true,
-    ["Dayoung560"] = true,
+    ["PlayerName2"] = true,
+    ["playerName3"] = true,
     ["PlayerName4"] = true,
     ["PlayerName5"] = true,
     ["PlayerName6"] = true,
